@@ -7,7 +7,7 @@ Public Class DbManager
         If Not DuplicateUser(username) Then
 
             'Change to your database parameters (!)
-            Dim ConnectionString As String = "Server=my_server;Database=name_of_db;User Id=user_name;Password=my_password"
+            Dim ConnectionString As String = "Server=PavelTrostianko\SQLEXPRESS;Database=CyberDB;User Id=mantas;Password=pass12345;Trusted_Connection=True;TrustServerCertificate=True;"
 
             Using sqlConn As New SqlConnection(ConnectionString)
 
@@ -35,7 +35,7 @@ Public Class DbManager
     Private Shared Function DuplicateUser(username As String) As Boolean
 
         'Change to your database parameters (!)
-        Dim ConnectionString As String = "Server=my_server;Database=name_of_db;User Id=user_name;Password=my_password"
+        Dim ConnectionString As String = "Server=PAVELTROSTIANKO\SQLEXPRESS;Database=CyberDB;User Id=mantas;Password=pass123"
 
         Using sqlConn As New SqlConnection(ConnectionString)
 
@@ -62,7 +62,7 @@ Public Class DbManager
     Public Shared Sub Login(username As String, password As String)
 
         'Change to your database parameters (!)
-        Dim ConnectionString As String = "Server=my_server;Database=name_of_db;User Id=user_name;Password=my_password"
+        Dim ConnectionString As String = "Server=PAVELTROSTIANKO\SQLEXPRESS;Database=CyberDB;User Id=mantas;Password=pass123"
 
         Dim salt As String = ""
 
